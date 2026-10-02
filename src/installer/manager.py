@@ -52,6 +52,16 @@ def generate_our_hook_config() -> dict:
                         "timeout": 5
                     }
                 ]
+            },
+            {
+                "matcher": "run_command",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": f'{cmd_template} PreToolUse',
+                        "timeout": 5
+                    }
+                ]
             }
         ],
         "Stop": [
